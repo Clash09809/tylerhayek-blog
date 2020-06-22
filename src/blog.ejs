@@ -9,7 +9,7 @@ pagination:
 <!------------------- PRELOAD --------------------->
 <div id="Preloader">
   <div id="LogoWrapper">
-    <img src="Assets/Icons/logo.png" />
+    <img src="/Assets/Icons/logo.png" />
   </div>
 </div>
 
@@ -66,7 +66,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="1"></div>
@@ -91,7 +91,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="2"></div>
@@ -116,7 +116,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="3"></div>
@@ -141,7 +141,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="4"></div>
@@ -172,7 +172,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="5"></div>
@@ -197,7 +197,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="6"></div>
@@ -222,7 +222,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="7"></div>
@@ -247,7 +247,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="8"></div>
@@ -278,7 +278,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="9"></div>
@@ -303,7 +303,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="10"></div>
@@ -328,7 +328,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="11"></div>
@@ -353,7 +353,7 @@ pagination:
               <h2>DATE</h2>
             </div>
           </div>
-          <h1 class="title">An example headline...</h1>
+          <h1 class="title"><%=pagination.items[i].title%></h1>
         </div>
       </div>
       <div class="animation-element up-trigger" data-num="12"></div>
@@ -362,3 +362,21 @@ pagination:
 </div>
 <% i++; %>
 <% } %>
+
+<!-- Pagination -->
+<div class="pagination-container">
+  <div class="pagination">
+    <% if (pagination.pageNumber != 0) { %>
+        <a href="<%=pagination.href.previous%>" class="previous">Prev</a>
+    <% } %>
+
+    <% for(var j = 0; j < pagination.items.length; j++) { %>
+      <a href="/<%=pagination.href[j]%>" 
+        <% if (pagination.pageNumber == j) {%>
+        class="page active"
+        <% } %>
+        ><%=j%></a>
+    <% } %>
+        <a href="<%=pagination.href.next%>" class="next">Next</a>
+  </div>
+</div>
