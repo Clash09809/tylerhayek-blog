@@ -1,8 +1,9 @@
 ---
+tags: blogs
 layout: blog_base.ejs
 pagination:
   data: articles
-  size: 12
+  size: 1
   alias: article
 ---
 
@@ -30,7 +31,7 @@ pagination:
 <!------------------- WELCOME SECTION --------------------->
 <div id="WelcomeSection">
   <canvas id="WelcomeParticles"></canvas>
-  <img src="../Assets/Images/Blog/curve.png" />
+  <img src="/Assets/Images/Blog/curve.png" />
 </div>
 
 <!------------------- DIVIDER SECTION -------------------->
@@ -38,17 +39,18 @@ pagination:
   <div class="divider parallax-element height down opacityShow"></div>
 </div>
 
-<% if (pagination.pageNumber = 0) { %> 
+<% if (pagination.pageNumber == 0) { %> 
   <% var i = 0; %> 
 <% } else { %> 
-  <% var i = 12 * pagination.pageNumber %>
+  <% var i = 1 * pagination.pageNumber %>
 <% }%>
 
-<% if (i < pagination.items.length) { %>
+
 
 <!------------------- BLOG SECTION -------------------->
 <div id="BlogSection">
   <div class="row one">
+    <% if (i < pagination.items.length) { %>
     <div
       class="blog-el one square-small top left border-bottom border-right animation1 ae-up ae-fadein"
     >
@@ -358,25 +360,31 @@ pagination:
       </div>
       <div class="animation-element up-trigger" data-num="12"></div>
     </div>
-  </div>
-</div>
 <% i++; %>
 <% } %>
+  </div>
+</div>
+
 
 <!-- Pagination -->
 <div class="pagination-container">
   <div class="pagination">
     <% if (pagination.pageNumber != 0) { %>
+        <a href="<%=pagination.href.first%>">&laquo;</a>
         <a href="<%=pagination.href.previous%>" class="previous">Prev</a>
     <% } %>
 
-    <% for(var j = 0; j < pagination.pages.length; j++) { %>
-      <a href="<%=pagination.href[j]%>" 
-        <% if (pagination.pageNumber == j) {%>
-        class="page active"
+    <% for (var j = 0; j < pagination.pages.length; j++) { %>
+      <a href="<%=pagination.hrefs[j]%>" 
+        <% if (pagination.pageNumber == j) { %>
+          class="active"
         <% } %>
         ><%=j%></a>
     <% } %>
-        <a href="<%=pagination.href.next%>" class="next">Next</a>
+    <% if (pagination.pageNumber < (pagination.pages.length - 1)) { %>
+      <a href="<%=pagination.href.next%>" class="next">Next</a>
+      <a href="<%=pagination.href.last%>">&raquo;</a>
+      
+    <% } %>
   </div>
 </div>
