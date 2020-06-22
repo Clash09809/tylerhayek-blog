@@ -1,0 +1,36 @@
+/******************** PRELOADER ********************/  
+                    
+/********* 900px *********/
+@media (max-width: 900px) { 
+/* wrapper */ 
+#Preloader #LogoWrapper { 
+	height: 100px;  
+	top: calc(50% - 50px);        
+}
+ 
+/* logo */
+#Preloader img { 
+	height: 100px; 
+}  
+}   
+
+  
+
+
+
+
+
+ 
+/******************** VERTICAL DIVIDER ********************/     
+
+/********* 850px *********/
+@media (max-width: 850px) {
+.vertical-divider {  
+	height: 150px; 
+	padding-top: 30px;   
+}
+
+.vertical-divider .divider { 
+	height: 45px;  
+}  
+}  

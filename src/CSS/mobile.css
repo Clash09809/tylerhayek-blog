@@ -1,0 +1,231 @@
+/******************** GENERAL ********************/  
+                       
+/********* max-height *********/
+@media (max-height: 600px) {
+/* document wrapper */ 
+#DocumentWrapper {  
+	height: 600px; 
+}
+}
+
+
+ 
+
+ 
+ 
+ 
+   
+/******************** PRELOADER ********************/  
+          
+/********* 900px *********/
+@media (max-width: 900px) { 
+/* wrapper */ 
+#Preloader #LogoWrapper { 
+	height: 100px;  
+	top: calc(50% - 50px);        
+}
+ 
+/* logo */
+#Preloader img { 
+	height: 100px; 
+}  
+}  
+ 
+
+
+
+
+
+
+     
+/******************** INFO BUTTON ********************/
+                                                                       
+/********* 900px *********/
+@media (max-width: 900px) {  
+#InfoButton {    
+   width: 45px;  
+   height: 45px;    
+   padding-top: 14px;  
+   top: 25px; 
+   left: 25px;        
+} 
+ 
+/* img */ 
+#InfoButton img { 
+	height: 17px;    
+}
+}  
+ 
+
+
+
+
+
+
+  
+/******************** PRIMARY CONTROLS ********************/
+ 
+/********* 900px *********/
+@media (max-width: 900px) { 
+.primary-control {  
+	height: 35px;   
+	top: 30px;   	
+} 
+
+/* positioning */ 
+#PrimaryCall { 
+	left: 95px;  
+}
+
+#PrimaryEmail { 
+	left: 135px;  
+} 
+
+/* display */
+.primary-control-display {   
+    display: none; 
+} 
+}
+  
+ 
+
+
+
+
+ 
+   
+/******************** COUNTDOWN ********************/
+ 
+/********* 900px *********/
+@media (max-width: 900px) { 
+#CountdownSection {  
+    width: 44px;   
+	height: 220px;    
+	top: auto;
+	bottom: 0px; 
+    right: 15px; 	   
+} 
+ 
+/* diamond */
+#CountdownSection .contdiamond {
+	width: 30px;
+	height: 30px;
+	margin-top: 20px;  	
+	padding-top: 9px; 
+}
+ 
+/* countdown */
+#CountdownSection p {
+	font-size: 10px; 
+}
+
+#CountdownSection p .let {
+	margin-left: 1px;
+	font-size: 6px;
+}  
+} 
+
+
+
+
+
+
+
+  
+/******************** TYPEWRITER ********************/ 
+ 
+/********* 900px *********/
+@media (max-width: 900px) {
+#Typewriter {     
+	left: -224px;   
+	font-size: 20px;   
+}  
+} 
+   
+
+
+
+
+
+
+ 
+/******************** INFO SECTION ********************/ 
+
+/********* max-height *********/
+@media (max-height: 600px) { 
+/* diagonal */ 
+#InfoSection .diagonal { 
+	border-bottom-width: 600px; 
+}  
+} 
+
+/********* 900px *********/
+@media (max-width: 900px) {  
+#InfoSection {     
+    right: calc(-100% - 100px); 	 
+} 
+  
+/* diagonal */
+#InfoSection .diagonal { 
+	left: -100px;    
+	border-left-width: 100px;    
+}
+ 
+/* close */ 
+#InfoSection #Close {    
+   width: 45px;
+   height: 45px;
+   padding-top: 10px;     
+   top: 25px;
+   left: 25px;   
+} 
+
+#InfoSection #Close img {
+	height: 25px;  
+}   
+
+/* image */ 
+#InfoSection .col.one { 
+    width: 40%;   
+}   
+
+/* social */
+#InfoSection .col.one #Overlay #Social {
+	height: 130px;   
+	width: 65px;  
+	left: 15px;  
+	top: 125px;  
+	bottom: auto;   
+} 
+
+/* icon */
+#InfoSection .col.one #Overlay #Social img {  
+	width: 25px; 
+    height: 25px;  
+}  
+  
+/* content */ 
+#InfoSection .col.two {
+	width: 60%;  
+	right: calc(-60% - 100px);    
+} 
+ 
+/* outer container */
+#InfoSection .col.two #InfoContent { 
+	width: 200px;   
+	top: auto;    
+    bottom: 50px;	
+	left: calc(50% - 130px);   
+}   
+ 
+/* logo */  
+#InfoSection .col.two #InfoContent img { 
+	height: 50px;    
+} 
+ 
+/* p */
+#InfoSection .col.two #InfoContent p {
+	margin-top: 30px;      
+	font-size: 12px; 
+} 
+} 
