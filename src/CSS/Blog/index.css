@@ -577,26 +577,30 @@ button {
 	color: white;
 } 
 
+/* Pagination */
+
 .pagination-container {
-	width: 100vw;
 	margin: 40px auto;
 	text-align: center;
 }
 
 .pagination {
 	display: inline-block;
-}
-
-.pagination a {
+  }
+  
+  .pagination a {
 	color: black;
 	float: left;
 	padding: 8px 16px;
 	text-decoration: none;
-}
-
-.pagination a.active {
+  }
+  .pagination a.active {
 	background-color: purple;
 	color: white;
   }
   
   .pagination a:hover:not(.active) {background-color: #ddd;}
+
+.blog-post h2, .blog-post p {
+	margin: 20px auto;
+}
