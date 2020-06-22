@@ -370,8 +370,8 @@ pagination:
         <a href="<%=pagination.href.previous%>" class="previous">Prev</a>
     <% } %>
 
-    <% for(var j = 0; j < pagination.items.length; j++) { %>
-      <a href="/<%=pagination.href[j]%>" 
+    <% for(var j = 0; j < pagination.pages.length; j++) { %>
+      <a href="<%=pagination.href[j]%>" 
         <% if (pagination.pageNumber == j) {%>
         class="page active"
         <% } %>
