@@ -1,7 +1,6 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
@@ -16,5 +15,7 @@
     "dotenv": "^8.2.0",
     "html-to-text": "^5.1.1",
     "showdown": "^1.9.1"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }

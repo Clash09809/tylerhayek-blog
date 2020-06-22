@@ -1,10 +1,5 @@
 ---
-tags: blog
 layout: blog_base.ejs
-pagination:
- data: articles
- size: 12
- alias: article
 ---
 
  <!------------------- PRELOAD ---------------------> 
@@ -63,16 +58,11 @@ pagination:
  
  
  
+ <% var i = 0; %>
  
- 
-
- <% if (pagination.pageNumber != 0) { %>
-    <% var i = 0; %>
- <% } else { %>
-    <% var i = 12 * pagination.pageNumber %>
- <%}%>
  <!------------------- BLOG SECTION -------------------->   
-<% if (i < pagination.items.length) { %>
+
+<% if (i < articles.length) { %>
  <div id="BlogSection">                 
  
     <div class="row one">      
@@ -88,14 +78,14 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>  
           <div class="animation-element up-trigger" data-num="1"></div> 
        </div> 
 <% i++; %>
 <% } %>
-<% if (i < pagination.items.length) { %>
+<% if (i < articles.length) { %>
 
        <div class="blog-el two square-small bottom left border-top border-right animation2 ae-up ae-fadein">
           <div class="blog-innerel image parallax-element up" data-distance="50"></div>  
@@ -109,14 +99,14 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>
           <div class="animation-element up-trigger" data-num="2"></div>  			
        </div>  
 <% i++; %>
 <% } %>
-<% if (i < pagination.items.length) { %>
+<% if (i < articles.length) { %>
        <div class="blog-el three square-large center border-right border-left animation3 ae-up ae-fadein"> 
           <div class="blog-innerel image parallax-element up" data-distance="50"></div>  
           <div class="blog-innerel overlay">  
@@ -129,14 +119,14 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>
           <div class="animation-element up-trigger" data-num="3"></div>  			
        </div>
 <% i++; %>   
 <% } %>
-<% if (i < pagination.items.length) %>
+<% if (i < articles.length) %>
        <div class="blog-el four rect-vert top right border-left animation4 ae-up ae-fadein"> 
           <div class="blog-innerel image parallax-element up" data-distance="50"></div>  
           <div class="blog-innerel overlay">  
@@ -149,7 +139,7 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>
           <div class="animation-element up-trigger" data-num="4"></div>  			
@@ -161,7 +151,7 @@ pagination:
     </div>
 <% i++; %>
 <% } %>
-<% if (i < pagination.items.length) { %> 
+<% if (i < articles.length) { %> 
     <div class="row two">
        <div class="blog-el one square-large top left border-right animation5 ae-up ae-fadein">
           <div class="blog-innerel image parallax-element right" data-distance="50"></div>   
@@ -175,14 +165,14 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>  
           <div class="animation-element up-trigger" data-num="5"></div> 
        </div> 
 <% i++; %>
 <% } %>
-<% if (i < pagination.items.length) { %>
+<% if (i < articles.length) { %>
        <div class="blog-el two rect-hor top right border-bottom border-left animation6 ae-up ae-fadein">
           <div class="blog-innerel image parallax-element right" data-distance="50"></div>  
           <div class="blog-innerel overlay">  
@@ -195,14 +185,14 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>
           <div class="animation-element up-trigger" data-num="6"></div>  			
        </div>   
 <% i++; %>
 <% } %>
-<% if (i < pagination.items.length) { %>
+<% if (i < articles.length) { %>
        <div class="blog-el three square-small bottom right border-top border-left animation7 ae-up ae-fadein">
           <div class="blog-innerel image parallax-element right" data-distance="50"></div>   
           <div class="blog-innerel overlay">  
@@ -215,14 +205,14 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>  
           <div class="animation-element up-trigger" data-num="7"></div> 
        </div>
 <% i++; %>
 <% } %>
-<% if (i < pagination.items.length) { %>
+<% if (i < articles.length) { %>
        <div class="blog-el four square-small bottom righthalf border-top border-right border-left animation8 ae-up ae-fadein">
           <div class="blog-innerel image parallax-element right" data-distance="50"></div>   
           <div class="blog-innerel overlay">  
@@ -235,7 +225,7 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>
           <div class="animation-element up-trigger" data-num="8"></div>  			
@@ -246,7 +236,7 @@ pagination:
     <div class="vertical-divider">      
        <div class="divider parallax-element height down opacityShow"></div> 
     </div>
-<% if (i < pagination.items.length) { %>
+<% if (i < articles.length) { %>
     <div class="row three">      
        <div class="blog-el one rect-hor top left border-bottom border-right animation9 ae-up ae-fadein">
           <div class="blog-innerel image parallax-element left" data-distance="50"></div>   
@@ -260,14 +250,14 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>  
           <div class="animation-element up-trigger" data-num="9"></div> 
        </div>  
 <% i++; %>
 <% } %>
-<% if (i < pagination.items.length) { %>
+<% if (i < articles.length) { %>
        <div class="blog-el two rect-hor bottom left border-top border-right animation10 ae-up ae-fadein">
           <div class="blog-innerel image parallax-element left" data-distance="50"></div>   
           <div class="blog-innerel overlay">  
@@ -280,14 +270,14 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>
           <div class="animation-element up-trigger" data-num="10"></div>  			
        </div>  
 <% i++; %>
 <% } %>
-<% if (i < pagination.items.length) { %>
+<% if (i < articles.length) { %>
        <div class="blog-el three rect-vert top right border-left animation11 ae-up ae-fadein">
           <div class="blog-innerel image parallax-element left" data-distance="50"></div>   
           <div class="blog-innerel overlay">  
@@ -300,14 +290,14 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>  
           <div class="animation-element up-trigger" data-num="11"></div> 
        </div>
 <% i++; %>
 <% } %>
-<% if (i < pagination.items.length) { %>
+<% if (i < articles.length) { %>
        <div class="blog-el four rect-vert bottom righthalf border-right border-left animation12 ae-up ae-fadein">
           <div class="blog-innerel image parallax-element left" data-distance="50"></div>   
           <div class="blog-innerel overlay">  
@@ -320,7 +310,7 @@ pagination:
                       <h2> DATE </h2> 
                    </div> 
                 </div>
-                <h1 class="title"> <%=pagination.items[i].title%> </h1>  
+                <h1 class="title"> title </h1>  
              </div> 
           </div>
           <div class="animation-element up-trigger" data-num="12"></div>  			
