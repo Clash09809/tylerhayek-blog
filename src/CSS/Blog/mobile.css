@@ -12,6 +12,22 @@
 #Preloader img { 
 	height: 100px; 
 }  
+
+.adminLogin a {
+	top: 20px;
+	right: 10px;
+}
+
+.blog-post {
+    margin: 20px auto;
+    padding: 0;
+    width: 300px;
+  }
+
+  .blog-post img {
+    width: 100%;
+  }
+
 }   
 
   

@@ -820,3 +820,23 @@ button {
 	font-style: italic;
 	color: rgb(100,100,100);
 }
+
+.nav-links {
+	position: absolute;
+	top: 5%;
+	right: 4%;
+	z-index: 1000000;
+}
+
+.nav-links ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	color: white;
+	font-size: 1rem;
+}
+
+.nav-links ul li {
+	padding: 0 0.3rem;
+}
+

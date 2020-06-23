@@ -18,18 +18,17 @@ module.exports = axios
           .substring(0, 200),
         img: data.image.url,
         slug: data.slug,
-        tags: data.tags,
         imgName: data.image.name,
         description: data.meta_description_for_SEO,
         keywords: data.meta_keywords_for_SEO,
         author: data.author.name,
         authorFb: data.author.facebook_profile_link,
         authorInsta: data.author.instagram_profile_link,
-        authorTwitter: data.author.twitter_profile_link
+        authorTwitter: data.author.twitter_profile_link,
+        authorAvatar: data.author.avatar.url
       };
       articlesArray.unshift(artObj);
     });
-    console.log(articlesArray)
     return articlesArray;
   })
   .catch(function (error) {

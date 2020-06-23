@@ -1,0 +1,94 @@
+/* text adjustments */
+h1, p {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: black;
+ }
+a {
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+  
+  .navbar {
+    background: purple !important;
+    width: 100vw;
+  }
+  
+  nav a {
+    color: white !important;
+    
+  }
+  
+  .navbar-brand {
+    font-family: "Abril Fatface", cursive;
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+
+  .show-header {
+      width: 100%;
+      margin: 100px auto;
+  }
+
+  .show-header > * {
+      width: 100%;
+      margin: 0 auto;
+  }
+
+  .author {
+    margin: 20px auto;
+    display: flex;
+  }
+  
+  .avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .author-bio {
+    margin: auto 20px;
+  }
+  
+  .author a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .author-bio a > * {
+    margin: 3px;
+  }
+  
+  .title {
+    font-size: 48px;
+  }
+  
+  
+  article img {
+    width: 480px;
+  }
+
+  footer {
+    background: black;
+    /* color: white; */
+    font-size: 21px;
+    padding: 40px 0;
+    margin-top: 40px;
+  }
+  
+  footer .social {
+    margin: 20px;
+  }
+  
+  footer a {
+    text-decoration: none;
+    /* color: white; */
+    margin: 10px;
+  }
+
+  @media (min-width: 320px) and (max-width: 600px) {
+
+    article img {
+      width: 80%;
+    }
+
+  }
