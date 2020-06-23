@@ -1,0 +1,15 @@
+---
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <% collection.all.forEach(item => { %>
+    <url>
+      <loc>https://prodigy-gaming.com<%=item.url%></loc>
+      <lastmod><%= item.date | date: '%Y-%m-%d' %></lastmod>
+      <changefreq><%= item.data.changefreq %></changefreq>
+      <priority><%= item.data.priority %></priority>
+    </url>
+  <% }) %>
+</urlset>
+

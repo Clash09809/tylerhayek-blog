@@ -1,11 +1,11 @@
 ---
-tags: blogs
 layout: blog_base.ejs
 pagination: 
  data: articles
- size: 4
+ size: 12
  alias: article
-
+changefreq: weekly
+priority: 1
 ---
 
 <!------------------- PRELOAD --------------------->
@@ -38,7 +38,7 @@ pagination:
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/blog" style="font-weight: bold;">Blog</a></li>
-    <li><a href="/https://pg-blog-cms.herokuapp.com/admin/">Login</a></li>
+    <li><a href="https://pg-blog-cms.herokuapp.com/admin/">Login</a></li>
   </ul>
 </div>
 
@@ -54,7 +54,7 @@ pagination:
   <div class="row blog-posts justify-content-md-center">
     <% pagination.items.forEach (item => { %>
     <div class="col-md-4 col-sm-12">
-      <a href="">
+      <a href="/blog/show/<%=item.slug%>">
         <div class="blog-post">
           <img src="<%=item.img%>" alt="<%=item.imgName%>"  width="360px">
           <h2><%=item.title%></h2>

@@ -4,12 +4,13 @@ pagination:
  size: 1
  alias: article
 permalink: /blog/show/<%=article.slug%>/index.html
+tags: articles
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Intromech | Show</title>
+    <title><%=article.title%></title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -18,7 +19,7 @@ permalink: /blog/show/<%=article.slug%>/index.html
     />
 
     <meta name="description" content="<%=article.description%>">
-    <meta name="keywords" content="<%=article.keyword%>">
+    <meta name="keywords" content="<%=article.keywords%>">
 
     <!-- Font Awesome -->
     <link
@@ -45,7 +46,7 @@ permalink: /blog/show/<%=article.slug%>/index.html
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-success">
         <div class="container">
-            <a class="navbar-brand" href="#">Prodigy Gaming</a>
+            <a class="navbar-brand" href="/">Prodigy Gaming</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -86,6 +87,9 @@ permalink: /blog/show/<%=article.slug%>/index.html
     </article>
   </main>
   
+  
+  <!--------------- Footer ---------------->
+
   <footer class="text-muted">
     <div class="text-center">
       <div class="copyright">&copy; Prodigy Gaming 2020</div>
@@ -96,6 +100,8 @@ permalink: /blog/show/<%=article.slug%>/index.html
       </div>
     </div>
   </footer>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

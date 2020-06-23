@@ -71,12 +71,12 @@ a {
     background: black;
     /* color: white; */
     font-size: 21px;
-    padding: 40px 0;
+    padding: 20px 0;
     margin-top: 40px;
   }
   
   footer .social {
-    margin: 20px;
+    margin: 5px 20px;
   }
   
   footer a {
